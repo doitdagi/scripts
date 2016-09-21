@@ -1,0 +1,26 @@
+
+DeviceDefinition:
+  description: A device definition that contains informations describing the current device
+  type: Object
+  fields:
+    deviceId:
+      description: The device agile specific ID
+      type: String
+    address:
+      description: The device protocol specific address
+      type: String
+    name:
+      type: String
+    description:
+      type: String
+    protocol:
+      type: String
+    path:
+      type: String
+      description: DBus specific path to reach the object instance
+    properties:
+      type: KeyValue
+    streams:
+      description: A list of components from which get data streams
+      type: Array
+      fields: DeviceComponent
