@@ -1,6 +1,5 @@
 #!/bin/sh
 
-
 NAME=agile-osjs
 docker rm $NAME
 docker run \
@@ -8,4 +7,3 @@ docker run \
     -p 8000:8000 \
    --name $NAME \
    agileiot/agile-osjs-armv7l
-

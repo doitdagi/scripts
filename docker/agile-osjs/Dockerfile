@@ -19,6 +19,14 @@ WORKDIR OS.js/
 RUN npm install --production
 RUN grunt
 
+RUN cd src/packages/default && git clone https://github.com/doitdagi/osjs-grafana.git Grafana
+
+RUN grunt manifest config packages:default/Grafana
+
+RUN cd src/packages/default && git clone https://github.com/doitdagi/osjs-influxdb.git InfluxDB
+
+RUN grunt manifest config packages:default/InfluxDB
+
 ## Start Application and Expose Port ##
 ## Note: you can change 'start-dev.sh' (Development Version) to 'start-dist.sh' (Production Version) ##
 
