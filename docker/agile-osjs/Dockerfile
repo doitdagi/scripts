@@ -19,13 +19,22 @@ WORKDIR OS.js/
 RUN npm install --production
 RUN grunt
 
+## Install Grafana
 RUN cd src/packages/default && git clone https://github.com/doitdagi/osjs-grafana.git Grafana
 
 RUN grunt manifest config packages:default/Grafana
 
+## Install Grafana
 RUN cd src/packages/default && git clone https://github.com/doitdagi/osjs-influxdb.git InfluxDB
 
 RUN grunt manifest config packages:default/InfluxDB
+
+
+## Install Node red Dashboard
+RUN cd src/packages/default && git clone https://github.com/doitdagi/agile-osjs-nodered-dashboard.git NodeRedDashboard
+
+RUN grunt manifest config packages:default/NodeRedDashboard
+
 
 ## Start Application and Expose Port ##
 ## Note: you can change 'start-dev.sh' (Development Version) to 'start-dist.sh' (Production Version) ##
