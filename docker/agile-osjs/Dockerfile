@@ -36,7 +36,12 @@ RUN cd src/packages/default && git clone https://github.com/doitdagi/agile-osjs-
 RUN grunt manifest config packages:default/NodeRedDashboard
 
 ## Install Agile Device Manager
+<<<<<<< HEAD
 RUN cd src/packages/default && https://github.com/doitdagi/agile-devicemanager-osjs.git DeviceManager
+=======
+RUN cd src/packages/default && git clone https://github.com/doitdagi/agile-devicemanager-osjs.git DeviceManager
+
+>>>>>>> ac7debbd7854a5c2279a7d41e7b4722fc0ae7a5e
 RUN grunt manifest config packages:default/DeviceManager
 
 ## Start Application and Expose Port ##
